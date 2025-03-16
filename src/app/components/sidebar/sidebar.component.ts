@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DataService } from '../../services/data.service';
-import { Test } from '../../interfaces/test';
+import { Note } from '../../interfaces/note';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,7 +10,7 @@ import { Test } from '../../interfaces/test';
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
-  testData: Test[] = [];
+  testData: Note[] = [];
 
   constructor(private dataService: DataService) {}
 

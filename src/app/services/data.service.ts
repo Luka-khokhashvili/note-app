@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { forkJoin, map, Observable } from 'rxjs';
-import { Test } from '../interfaces/test';
+import { Note } from '../interfaces/note';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   getAllData(): Observable<any> {
-    return this.http.get<Test[]>(this.apiUrl + '/testData');
+    return this.http.get<Note[]>(this.apiUrl + '/testData');
   }
 
   // createPost(postData: any): void {

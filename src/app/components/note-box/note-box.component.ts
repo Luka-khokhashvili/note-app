@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
 import { DataService } from '../../services/data.service';
-import { Test } from '../../interfaces/test';
+import { Note } from '../../interfaces/note';
 
 @Component({
   selector: 'app-note-box',
@@ -11,7 +11,7 @@ import { Test } from '../../interfaces/test';
   styleUrl: './note-box.component.css',
 })
 export class NoteBoxComponent {
-  testData: Test[] = [];
+  testData: Note[] = [];
   noteContent: string = '';
 
   constructor(private dataService: DataService) {}
